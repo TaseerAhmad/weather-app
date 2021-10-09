@@ -1,0 +1,46 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+#root-container {
+    background-color: #4e5860;
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+#weather-card {
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    width: 35%;
+    height: 80%;
+}
+
+@media screen and (max-width: 576px) {
+    #weather-card {
+        width: 80%;
+        height: 60%;
+    }
+}
+
+#card-top {
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    background-color: #f1f8f9;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    width: 100%;
+    height: 70%;
+}
+
+#card-bottom {
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    background-color: #2e3335;
+    width: 100%;
+    height: 30%;
+}
