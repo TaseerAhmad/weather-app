@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WeatherInfo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -15,11 +18,46 @@
 
         <div id="weather-card">
             <div id="card-top">
-                
+                <div id="weather-icon-container">
+                    <a id="refresh" href="#">
+                        <img src="https://img.icons8.com/ios-glyphs/30/000000/refresh--v2.png" />
+                    </a>
+                    <img id="weather-icon" src="assets/wt_cloud.svg">
+                </div>
+
+                <div id="top-weather-info-container">
+                    <p id="temperature">79<sup>o</sup></p>
+
+                    <ul>
+                        <li id="weather-type">Cloudy Skies</li>
+                        <li id="location">Sickerville, New Jersey</li>
+                    </ul>
+
+                    <span>
+                        <span id="month">MAY</span>
+                        <br>
+                        <span id="day">21</span>
+                    </span>
+                </div>
+
             </div>
 
             <div id="card-bottom">
+                <div class="bottom-info-item">
+                    <img class="weather-bottom-info"
+                        src="https://img.icons8.com/material-outlined/24/000000/wind.png" />
+                    <p class="weather-bottom-info">2 MPH</p>
+                </div>
 
+                <div class="bottom-info-item">
+                    <img src="https://img.icons8.com/material-outlined/24/000000/rain--v1.png" />
+                    <p class="weather-bottom-info">33%</p>
+                </div>
+
+                <div class="bottom-info-item">
+                    <img src="https://img.icons8.com/material-outlined/24/000000/sun--v1.png" />
+                    <p class="weather-bottom-info">83%</p>
+                </div>
             </div>
         </div>
 
@@ -27,5 +65,4 @@
 
 </body>
 <script src="script.js"></script>
-
 </html>
