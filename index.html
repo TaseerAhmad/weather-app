@@ -17,26 +17,24 @@
     <div id="root-container">
 
         <div id="weather-card">
+
             <div id="card-top">
                 <div id="weather-icon-container">
-                    <a id="refresh" href="#">
-                        <img src="https://img.icons8.com/ios-glyphs/30/000000/refresh--v2.png" />
-                    </a>
                     <img id="weather-icon" src="assets/wt_cloud.svg">
                 </div>
 
                 <div id="top-weather-info-container">
-                    <p id="temperature">79<sup>o</sup></p>
+                    <p id="temperature">N/A<sup>o</sup></p>
 
                     <ul>
-                        <li id="weather-type">Cloudy Skies</li>
-                        <li id="location">Sickerville, New Jersey</li>
+                        <li id="weather-type">N/A</li>
+                        <li id="location">N/A</li>
                     </ul>
 
                     <span>
-                        <span id="month">MAY</span>
+                        <span id="month"></span>
                         <br>
-                        <span id="day">21</span>
+                        <span id="day"></span>
                     </span>
                 </div>
 
@@ -46,17 +44,19 @@
                 <div class="bottom-info-item">
                     <img class="weather-bottom-info"
                         src="https://img.icons8.com/material-outlined/24/000000/wind.png" />
-                    <p class="weather-bottom-info">2 MPH</p>
+                    <p class="weather-bottom-info" id="wind">N/A<span style="background-color: transparent;">KM/h</span>
+                    </p>
                 </div>
 
                 <div class="bottom-info-item">
                     <img src="https://img.icons8.com/material-outlined/24/000000/rain--v1.png" />
-                    <p class="weather-bottom-info">33%</p>
+                    <p class="weather-bottom-info" id="humidity">N/A<span
+                            style="background-color: transparent;">%</span></p>
                 </div>
 
                 <div class="bottom-info-item">
                     <img src="https://img.icons8.com/material-outlined/24/000000/sun--v1.png" />
-                    <p class="weather-bottom-info">83%</p>
+                    <p class="weather-bottom-info" id="uv-intensity">N/A</p>
                 </div>
             </div>
         </div>
@@ -65,4 +65,5 @@
 
 </body>
 <script src="script.js"></script>
+
 </html>

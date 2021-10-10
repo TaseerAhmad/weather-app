@@ -79,6 +79,10 @@ span {
     filter: opacity(1.5) drop-shadow(0 0 0 #778287);
 }
 
+#wind {
+    background-color: transparent;
+}
+
 #weather-icon-container {
     display: flex;
     flex-direction: column;
@@ -131,7 +135,7 @@ span {
     font-weight: lighter;
     opacity: 0.5;
     flex-grow: 1;
-    
+
 }
 
 @media screen and (max-width: 576px) {

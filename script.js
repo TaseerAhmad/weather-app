@@ -10,7 +10,6 @@ refreshBt.onclick = () => {
     refreshBt.style.transform = 'rotate(360deg)';
 };
 
-
 function getCurrentLocation() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition((position) => {
@@ -58,10 +57,21 @@ function showError(error) {
 
 async function fetchWeatherData(lat, long) {
     const apiKey = 'd80172e905e5cca0f6e494fb74060015';
-    const url = `api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${apiKey}`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${apiKey}`;
 
-    const response = await fetch(url.toString());
+    const response = await fetch(url);
     const data = await response.json();
 
-    console.log(data);
+    const temperature = data['main'].temp;
+    const weatherType = data['weather'][0].main;
+    const humidity = data['main'].humidity;
+    const wind = data['wind'].speed;
+    const city = data['name'];
+
+    document.getElementById('location').innerHTML = city;
+    document.getElementById('humidity').firstChild.data = humidity;
+    // document.getElementById('uv-intensity').innerHTML = wind;
+    document.getElementById('weather-type').innerHTML = weatherType;
+    document.getElementById('wind').firstChild.data = (wind * 3.6).toFixed(0);
+    document.getElementById('temperature').firstChild.data = (temperature - 273.15).toFixed(0);
 }
