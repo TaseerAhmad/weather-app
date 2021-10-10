@@ -56,7 +56,7 @@ function showError(error) {
 }
 
 async function fetchWeatherData(lat, long) {
-    const apiKey = 'd80172e905e5cca0f6e494fb74060015';
+    const apiKey = 'd80172e905e5cca0f6e494fb74060015'; //Please do not abuse the API :(
     const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${apiKey}`;
 
     const response = await fetch(url);
