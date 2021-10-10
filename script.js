@@ -62,15 +62,14 @@ async function fetchWeatherData(lat, long) {
     const response = await fetch(url);
     const data = await response.json();
 
-    const temperature = data['main'].temp;
     const weatherType = data['weather'][0].main;
-    const humidity = data['main'].humidity;
+     const humidity = data['main'].humidity;
+    const temperature = data['main'].temp;
     const wind = data['wind'].speed;
     const city = data['name'];
 
     document.getElementById('location').innerHTML = city;
     document.getElementById('humidity').firstChild.data = humidity;
-    // document.getElementById('uv-intensity').innerHTML = wind;
     document.getElementById('weather-type').innerHTML = weatherType;
     document.getElementById('wind').firstChild.data = (wind * 3.6).toFixed(0);
     document.getElementById('temperature').firstChild.data = (temperature - 273.15).toFixed(0);
